@@ -1,9 +1,9 @@
-@if(job_search.myTags && job_search.myTags.length > 0){
+@if(jobSearchService.myTags && jobSearchService.myTags.length > 0){
   <main
     class="bg-white -mt-12 mx-6 xl:mx-36 lg:mx-16 lg:-mt-8 flex relative p-4 lg:p-4 px-4 lg:px-10 rounded-md shadow-xl"
   >
     <div class="tags flex flex-wrap gap-5">
-      @for(job of job_search.myTags ; track job_search.myTags ){
+      @for(job of jobSearchService.myTags ; track job ){
       <div class="search-tag rounded-md flex">
         <p
           class="text-text-cyan font-bold text-lg search-tag p-2 rounded-l-lg bg-filter-cyan"
@@ -12,7 +12,7 @@
         </p>
         <div
           class="close bg-text-cyan hover:bg-darkest-cyan cursor-pointer p-2.5 flex items-center rounded-r-lg"
-          (click)="deleteTag(job)"
+
         >
           <img src="../../../assets/images/icon-remove.svg" alt="" class="h-5" />
         </div>
@@ -20,7 +20,7 @@
       }
     </div>
 
-    <div class="clear ml-auto mt-auto mb-auto" (click)="clearAll()">
+    <div class="clear ml-auto mt-auto mb-auto">
       <p
         class="hover:text-text-cyan text-dark-cyan font-bold text-center mt-1 lg:mt-3 cursor-pointer peer"
       >

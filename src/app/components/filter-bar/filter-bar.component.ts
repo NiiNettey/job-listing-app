@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JobSearchService } from '../../services/job-search.service';
 
 @Component({
   selector: 'app-filter-bar',
@@ -8,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './filter-bar.component.css'
 })
 export class FilterBarComponent {
+
+  constructor(public jobSearchService: JobSearchService){
+  }
 
 }

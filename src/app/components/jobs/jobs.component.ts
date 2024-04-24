@@ -7,13 +7,14 @@ import { NgFor } from '@angular/common';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-jobs',
-  standalone: true,
-  imports: [],
-  templateUrl: './jobs.component.html',
-  styleUrl: './jobs.component.css'
-  imports: [CardComponent, NgFor]
+    selector: 'app-jobs',
+    standalone: true,
+    templateUrl: './jobs.component.html',
+    styleUrl: './jobs.component.css',
+    imports: [CardComponent]
 })
 export class JobsComponent {
+
+  constructor(public jobData: JobDataService){}
 
 }

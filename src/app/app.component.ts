@@ -8,9 +8,8 @@ import { FilterBarComponent } from "./components/filter-bar/filter-bar.component
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
   imports: [RouterOutlet, HeaderComponent, JobsComponent, CardComponent, FilterBarComponent]
 })
 export class AppComponent {
