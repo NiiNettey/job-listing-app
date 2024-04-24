@@ -1,1 +1,5 @@
-<p>jobs works!</p>
+<div class="jobs-wrap mb-16 mt-16">
+  @for(job of jobs; track jobs; let count = $count){
+  <app-card [job]="job" />
+  }
+</div>
