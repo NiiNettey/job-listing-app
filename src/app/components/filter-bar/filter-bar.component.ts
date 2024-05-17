@@ -17,6 +17,11 @@ export class FilterBarComponent {
     this.jobSearchService.myTags.splice(index, 1); // Remove the tag at the given index
   }
 
+  deleteTag(tag: string) {
+    const index = this.jobSearchService.myTags.indexOf(tag);
+    this.jobSearchService.myTags.splice(index, 1);
+  }
+
   clearTags(): void {
     this.jobSearchService.myTags = []; // Clear all tags
   }

@@ -42,5 +42,4 @@ export class CardComponent {
       this.jobSearchService.myTags.splice(index, 1);
     }
   }
-
 }
